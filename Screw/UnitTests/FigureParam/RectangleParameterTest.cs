@@ -14,30 +14,30 @@ using System.Threading.Tasks;
 namespace Screw.UnitTests.FigureParam
 {
     /// <summary>
-    /// Класс для теста класса "RectangleParameter"
+    /// Class for class test "RectangleParameter"
     /// </summary>
     [TestFixture]
     public class RectangleParameterTest
     {
         /// <summary>
-        /// Test RectangleParameter на нормальные параметры
+        /// Test RectangleParameter to normal parameters
         /// </summary>
         /// <param name="errorCode">Expected error code</param>
         /// <param name="width">Width of rectangle</param>
         /// <param name="height">Height of rectangle</param>
-        [TestCase(ErrorCodes.OK, 10.0, 10.0, TestName = 
-            "RectangleParameter, нормальные параметры")]
+        [TestCase(ErrorCodes.OK, 10.0, 10.0, TestName =
+            "RectangleParameter, normal parameters")]
         [TestCase(ErrorCodes.ArgumentInvalid, 0.0, 0.0, TestName = 
-            "RectangleParameter, параметры = ноль")]
-        [TestCase(ErrorCodes.ArgumentInvalid, -10.0, -10.0, TestName = 
-            "RectangleParameter, параметры меньше нуля")]
+            "RectangleParameter, parameters = zero")]
+        [TestCase(ErrorCodes.ArgumentInvalid, -10.0, -10.0, TestName =
+            "RectangleParameter, parameters less zero")]
         [TestCase(ErrorCodes.ArgumentInvalid, double.MaxValue, double.MinValue, 
-            TestName = "RectangleParameter, double максимальные и минимальные значения")]
+            TestName = "RectangleParameter, double max и min value")]
         [TestCase(ErrorCodes.ArgumentInvalid, double.NaN, double.NaN, TestName = 
-            "RectangleParameter, double не числовые значения")]
+            "RectangleParameter, double not number value")]
         [TestCase(ErrorCodes.ArgumentInvalid, double.PositiveInfinity, 
             double.NegativeInfinity, TestName = 
-            "RectangleParameter, double значения бесконечности")]
+            "RectangleParameter, double infinity value")]
         public void TestRectangleParameterNormal(ErrorCodes errorCode, 
             double width, double height)
         {

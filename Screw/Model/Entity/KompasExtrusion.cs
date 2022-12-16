@@ -18,7 +18,7 @@ namespace Screw.Model.Entity
 
     /// <summary>
     /// Extrusion class.
-    /// Представляет выдавливание детали 3D документа.
+    /// Represents the extrusion of a part of a 3D document.
     /// </summary>
     public class KompasExtrusion
     {
@@ -38,8 +38,8 @@ namespace Screw.Model.Entity
         private ksPart _doc3DPart;
 
         /// <summary>
-        /// Необходим для правильного определения базовой_основной 
-        /// плоскости и параллельной базовой плоскости.
+        /// Required to correctly determine base_base
+        /// plane and parallel base plane.
         /// </summary>
         public KompasFaces.BaseFaceAreaState BaseFaceAreaState
         {
@@ -57,12 +57,12 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Extruded (выдавлЕННЫЙ) entity
+        /// Extruded entity
         /// </summary>
         private ksEntity _extrudedEntity;
 
         /// <summary>
-        /// Extruded (выдавлЕННЫЙ) entity
+        /// Extruded entity
         /// </summary>
         public ksEntity ExtrudedEntity
         {
@@ -82,7 +82,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Выдавливание по направлению, глубине и выдавливаемому объекту
+        /// Extrusion by direction, depth and extruded object
         /// </summary>
         /// <param name="doc3DPart">Kompas document 3D part</param>
         /// <param name="extrusionType">Extrusion type</param>
@@ -179,7 +179,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Создание экструзии на основе экструдируемого эскиза
+        /// Create an extrusion from an extruded sketch
         /// </summary>
         /// <param name="entity">Entity of extrusion</param>
         /// <param name="extrusionType">Extrusion type</param>
@@ -258,7 +258,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Создание экструзии на основе экструдируемого эскиза
+        /// Create an extrusion from an extruded sketch
         /// </summary>
         /// <param name="entity">Entity of extrusion</param>
         /// <param name="extrusionType">Extrusion type</param>
@@ -378,9 +378,9 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        ///Получить экструдированный объект
+        /// Get extruded object
         ///<seealso cref="_baseFaceAreaState">
-        ///информация о _основной базовой грани</seealso>
+        ///information about _primary base face</seealso>
         /// </summary>
         /// <returns>Extruded entity</returns>
         private ksEntity GetExtrudedEntity()
@@ -425,8 +425,8 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Установить выдавленную сущность в ноль 
-        /// для дальнейшей переопределения базовой плоскости _main_
+        /// Set extruded entity to null
+        /// to further redefine the reference plane _main_
         /// </summary>
         public void ResetExtrudedEntity()
         {

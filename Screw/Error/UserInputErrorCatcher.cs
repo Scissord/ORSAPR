@@ -4,7 +4,7 @@ using System.Windows.Forms;
 namespace Screw.Error
 {
     /// <summary>
-    /// ошибки ввода пользователем
+    /// User input errors
     /// </summary>
     public class UserInputErrorCatcher
     {

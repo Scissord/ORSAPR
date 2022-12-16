@@ -40,8 +40,8 @@ namespace Screw.Model.FigureParam
         }
 
         /// <summary>
-        /// Параметр вращения по граням вращения (начало и конец),
-        /// точке расположения вращения, размеру диаметра и шагу вращения
+        /// Parameter of rotation on the faces of rotation(beginning and end),
+        /// rotation location, diameter size and rotation step
         /// </summary>
         /// <param name="parameters">Parameters of spin</param>
         public Spin(SpinParameters parameters)
@@ -76,8 +76,8 @@ namespace Screw.Model.FigureParam
         }
 
         /// <summary>
-        /// Создание определения вращения по начальной
-        /// и конечной сущности, диаметру и высоте вращения
+        /// Creating a rotation definition based on origin
+        /// and final essence, diameter and height of rotation
         /// </summary>
         /// <param name="parameters">Spin parameters</param>
         private bool CreateSpin(SpinParameters parameters)

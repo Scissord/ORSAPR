@@ -49,7 +49,7 @@ namespace Screw.Model.Entity
         }
 
             /// <summary>
-            /// Конструктор глушителя
+            /// Muffler constructor
             /// </summary>
             /// <param name="figureParameters">Parameters of muffler</param>
             /// <param name="kompasApp">Kompas application specimen</param>
@@ -85,13 +85,13 @@ namespace Screw.Model.Entity
                 return;
             }
         }
-           
+
         /// <summary>
-        /// Создать глушитель оси базовой плоскости
+        /// Create Base Plane Axis Muffler
         /// </summary>
         /// <param name="figureParameters">Parameters of muffler</param>
         /// <param name="basePlane">Base plane of muffler, by default is null</param>
-        /// <returns>Выдавливание глушителя или ноль, если выдавливание возвращает ошибку</returns>
+        /// <returns>Muffler extrusion, or null if extrusion returns an error</returns>
         private KompasExtrusion CreateMuffler(MufflerParameters figureParameters, 
             ksEntity basePlane = null)
         {
@@ -140,7 +140,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Удалить глушитель из 3D детали документа
+        /// Remove Muffler from 3D Document Part
         /// </summary>
         public bool DeleteDetail()
         {

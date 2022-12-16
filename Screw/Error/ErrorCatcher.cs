@@ -10,7 +10,7 @@ namespace Screw.Error
    public class ErrorCatcher
     {
         /// <summary>
-        /// Показать сообщение об ошибке при построении
+        /// Show error message on build
         /// </summary>
         public void CatchError(ErrorCodes errorCode)
         {
@@ -25,7 +25,7 @@ namespace Screw.Error
         }
 
         /// <summary>
-        /// Показать сообщение о успешном построении, в случае отсутствия ошибок
+        /// Show a success message if there are no errors
         /// </summary>
         public void CatchSuccess()
         {

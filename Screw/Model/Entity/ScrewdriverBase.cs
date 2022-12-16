@@ -79,13 +79,13 @@ namespace Screw.Model.Entity
 
 
         /// <summary>
-        /// метод создания треугольника для крестообразного шлица
+        /// Method for creating a triangle for a cross slot
         /// </summary>
-        /// <param name="width">длина </param>
-        /// <param name="height">высота</param>
-        /// <param name="planeType">плоскость</param>
-        /// <param name="type">метод выдавливания</param>
-        /// <param name="extrusionHeight">высота выдавливания</param>
+        /// <param name="width">Width</param>
+        /// <param name="height">Height</param>
+        /// <param name="planeType">PlaneType</param>
+        /// <param name="type">Extrusion method</param>
+        /// <param name="extrusionHeight">Extrusion height</param>
         /// <returns></returns>
         private ksEntity DrawTriangle(
             Double width, 
@@ -118,9 +118,9 @@ namespace Screw.Model.Entity
             return regPolyExtrusion.ExtrudedEntity;
         }
 
-      
+
         /// <summary>
-        /// Метод построения крестообразного шлица
+        /// Phillips construction method
         /// </summary>
         /// <param name="parameters"></param>
         /// <returns></returns>
@@ -143,7 +143,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Метод построения щлица в виде многоугольника
+        /// Method for constructing a slot in the form of a polygon
         /// </summary>
         /// <param name="parameters"></param>
         /// <returns></returns>

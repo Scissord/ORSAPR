@@ -42,7 +42,7 @@ namespace Screw.Model.FigureParam
         public double SpinStep;
 
         /// <summary>
-        /// Spin parameters contstructor
+        /// Spin parameters constructor
         /// </summary>
         /// <param name="document3DPart">Part of document with detail</param>
         /// <param name="beginSpinFace">Begin face of spin</param>

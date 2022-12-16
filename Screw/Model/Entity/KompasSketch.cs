@@ -44,7 +44,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Создать эскиз по базовой плоскости
+        /// Create sketch from reference plane
         /// </summary>
         /// <param name="doc3DPart">Document 3D part</param>
         /// <param name="basePlane">Base plane</param>
@@ -62,7 +62,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Создать эскиз по базовой плоскости
+        /// Create sketch from reference plane
         /// </summary>
         /// <param name="doc3DPart">Document 3D part</param>
         /// <param name="basePlaneAxis">Base plane axis</param>
@@ -89,7 +89,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Начать редактирование объекта
+        /// Start editing object
         /// </summary>
         /// <returns>Kompas 2D document (editable sketch)</returns>
         public ksDocument2D BeginEntityEdit()
@@ -103,7 +103,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Конец редактирования объекта
+        /// End of object editing
         /// </summary>
         public void EndEntityEdit()
         {
@@ -111,7 +111,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Создать объект по базовой плоскости
+        /// Create object from reference plane
         /// </summary>
         /// <param name="doc3DPart">Part of 3D document (detail in build)</param>
         /// <returns>true if operation successful; false in case of error</returns>
@@ -151,10 +151,10 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Получить базовую плоскость по оси или получить уже установленную базовую плоскость
+        /// Get datum plane along axis or get already set datum plane
         /// </summary>
         /// <param name="doc3DPart">Part of 3D document (detail in build)</param>
-        /// <returns>Уже установлена ​​базовая плоскость или базовая плоскость по оси</returns>
+        /// <returns>Reference plane or axis reference plane already set</returns>
         private ksEntity GetBasePlane(ksPart doc3DPart)
         {
             ksEntity basePlane = null;

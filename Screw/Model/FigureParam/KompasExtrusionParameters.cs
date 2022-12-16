@@ -21,7 +21,7 @@ namespace Screw.Model.FigureParam
         public Obj3dType ExtrusionType;
 
         /// <summary>
-        /// Extrudable (выдавливаЕМЫЙ) entity
+        /// Extrudable entity
         /// </summary>
         public ksEntity ExtrudableEntity;
 
@@ -46,7 +46,7 @@ namespace Screw.Model.FigureParam
         /// </summary>
         /// <param name="document3DPart">Part with detail in 3d document</param>
         /// <param name="extrusionType">Type of extrusion</param>
-        /// <param name="extrudableEntity">Extrudable (выдавливаЕМЫЙ) entity</param>
+        /// <param name="extrudableEntity">Extrudable entity</param>
         /// <param name="direction">Type of direction of extrusion</param>
         /// <param name="depth">Depth of extrusion</param>
         public KompasExtrusionParameters(ksPart document3DPart, Obj3dType extrusionType, 
@@ -66,7 +66,7 @@ namespace Screw.Model.FigureParam
         /// </summary>
         /// <param name="document3DPart">Part with detail in 3d document</param>
         /// <param name="extrusionType">Type of extrusion</param>
-        /// <param name="extrudableEntity">Extrudable (выдавливаЕМЫЙ) entity</param>
+        /// <param name="extrudableEntity">Extrudable entity</param>
         /// <param name="sketchesCollection">Collection of extrudable sketches for types 
         /// such as loft, evolution etc.</param>
         public KompasExtrusionParameters(ksPart document3DPart, Obj3dType extrusionType, 

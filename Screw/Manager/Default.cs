@@ -11,37 +11,37 @@ namespace Screw.Manager
     {
  
         /// <summary>
-        /// Диаметр шляпки винта
+        /// Hat diameter
         /// </summary>
         public double _diameter;
 
         /// <summary>
-        /// Глубина шлица
+        /// Slot depth
         /// </summary>
         public double _slotDepth;
 
         /// <summary>
-        /// Длина гладкой части
+        /// Smooth part
         /// </summary>
         public double _smoothPart;
 
         /// <summary>
-        /// Длина резьбы
+        /// Thread Part
         /// </summary>
         public double _threadPart;
 
         /// <summary>
-        /// Высота шляпки винта
+        /// Hat height
         /// </summary>
         public double _hatHeight;
 
         /// <summary>
-        /// Ширина шлица
+        /// Slot Width
         /// </summary>
         public double _slotWidth;
 
         /// <summary>
-        /// установка дефолтных параметров
+        /// Setting default parameters
         /// </summary>
         /// <param name="diam"></param>
         /// <param name="slotD"></param>
@@ -61,7 +61,7 @@ namespace Screw.Manager
         }
 
         /// <summary>
-        /// дефолтные параметры
+        /// Default parameters
         /// </summary>
         public Default() :this ( 27, 5, 15, 64, 10, 5.4 ) { }
         

@@ -92,9 +92,9 @@ namespace Screw.Manager
         }
 
         /// <summary>
-        /// Создание муфлера и шляпки винта
+        /// Create muffler and hat
         /// </summary>
-        /// <returns>Выдавленная шляпка винта для базовой части винта</returns>
+        /// <returns>Hat extrusion</returns>
         private ksEntity CreateHat()
         {
             double basePoint   = -(_kompasApp.Parameters[0] / 5.0);
@@ -111,7 +111,7 @@ namespace Screw.Manager
             return extruded;
         }
         /// <summary>
-        /// метод создания скетча для шляпки винта
+        /// Method for sketching a screw head
         /// </summary>
         /// <returns></returns>
         private ksEntity DrawScrewHat()
@@ -148,13 +148,13 @@ namespace Screw.Manager
 
             return new ksEntity[2] {extruded1, extruded2};
         }
-        
+
         /// <summary>
-        /// Метод выдавливания для гладкой части и резьбы
+        /// Extrusion method for smooth part and thread
         /// </summary>
         /// <param name="screwBase"></param>
-        /// <param name="type">тип выдавливания</param>
-        /// <param name="extrusionHeight">высота выдавливания</param>
+        /// <param name="type">Extrusion type</param>
+        /// <param name="extrusionHeight">Extrusion height</param>
         /// <returns></returns>
         private ksEntity ExtrusionScrew(KompasSketch screwBase, 
             Direction_Type type, Double extrusionHeight)
@@ -179,13 +179,13 @@ namespace Screw.Manager
         }
 
         /// <summary>
-        /// Метод отрисовки скетчей основных частей винта
-        /// гладкой и основы под резьбу
+        /// Method for drawing sketches of the main parts of the bolt
+        /// smooth and threaded
         /// </summary>
         /// <param name="screwBase"></param>
-        /// <param name="screwBasePoint"> установка базовых точек для скетча</param>
-        /// <param name="extrusionHeight">длинв на которую будет производиться выдавливание</param>
-        /// <param name="LineStyle">стиль линии</param>
+        /// <param name="screwBasePoint">Setting base points for the sketch</param>
+        /// <param name="extrusionHeight">The length to which the extrusion will be made</param>
+        /// <param name="LineStyle">Style of line</param>
         /// <returns></returns>
         private bool DrawScrew(KompasSketch screwBase, KompasPoint2D screwBasePoint,
             Double extrusionHeight, Int32 LineStyle = 1)

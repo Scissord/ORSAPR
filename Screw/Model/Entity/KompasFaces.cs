@@ -11,7 +11,7 @@ namespace Screw.Model.Entity
     {
         /// <summary>
         /// Base face area state: 
-        /// higher than parralel base face 
+        /// higher than parallel base face 
         /// or lower than the latter
         /// </summary>
         public enum BaseFaceAreaState
@@ -66,10 +66,10 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Получить индексы базовой плоскости цилиндра по индексам граней цилиндра
-        /// внутри коллекции граней деталей
+        /// Get cylinder base plane indices from cylinder face indices
+        /// inside the part face collection
         /// </summary>
-        /// <param name="_doc3DPart">Document 3D part, представляет деталь</param>
+        /// <param name="_doc3DPart">Document 3D part</param>
         /// <param name="startIndex">Start index of faces in faces collection</param>
         /// <param name="endIndex">End index of faces in faces collection</param>
         /// <param name="outFirstIndex">First base plane index</param>
@@ -120,10 +120,10 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Вернуть грань, параллельную базовой грани
+        /// Return Face Parallel to Base Face
         /// </summary>
-        /// Этот алгоритм использует области сбора граней в диапазоне
-        /// от начального индекса до конечного индекса. 
+        /// This algorithm uses face collection areas in the range
+        /// from start index to end index. 
         /// <param name="_doc3DPart">Kompas part of 3D document</param>
         /// <param name="startIndex">Face collection start index</param>
         /// <param name="endIndex">Face collection end index</param>
@@ -288,10 +288,10 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Получить базовую плоскость, параллельную _основной базовой плоскости.
-        /// Разница между этими плоскостями заключается в том, 
-        /// что базовая плоскость _main_ является выдавливаемой сущностью,
-        /// а базовая плоскость _parallel_ выдавленной вытянутой сущностью.
+        /// Get base plane parallel to _main base plane.
+        /// The difference between these planes is
+        /// that the base plane _main_ is an extruded entity,
+        /// and the base plane is _parallel_ an extruded extruded entity.
         /// </summary>
         /// <param name="_doc3DPart">Kompas part of 3D document</param>
         /// <param name="faceIndex1">Base plane index 1</param>
@@ -353,8 +353,8 @@ namespace Screw.Model.Entity
 
         /// <summary>
         /// Draws the word "XYZ" on plane. 
-        /// Эта функция используется для отладки других функций
-        /// которые работают с эскизами.
+        /// This function is used to debug other functions
+        /// who work with sketches.
         /// </summary>
         /// <param name="_doc3DPart">Kompas part of 3D document</param>
         /// <param name="plane">Selected plane</param>
@@ -378,7 +378,7 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        ///Получить количество элементов в списке
+        /// Get the number of elements in a list
         /// </summary>
         /// <param name="list">List of doubles</param>
         /// <param name="findElement">Element to find</param>
