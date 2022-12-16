@@ -20,26 +20,26 @@ namespace Screw.UnitTests.Model.Entity
     public class KompasExtrusionTest
     {
         /// <summary>
-        /// Тест создания базового extrusion по эскизу
+        /// Test for creating a basic extrusion from a sketch
         /// </summary>
         /// <param name="errorCode">Error code</param>
-        /// <param name="extrusionType">Extrusion type, экземпляр Obj3dType</param>
-        /// <param name="directionType">Direction type, экземпляр Direction_Type</param>
+        /// <param name="extrusionType">Extrusion type, instance Obj3dType</param>
+        /// <param name="directionType">Direction type, instance Direction_Type</param>
         [TestCase(ErrorCodes.OK, Obj3dType.o3d_baseExtrusion, 
             Direction_Type.dtNormal, TestName = "KompasExtrusion by sketch, type =" +
-            " baseExtrusion, нормальное направление")]
+            " baseExtrusion, normal direction")]
         [TestCase(ErrorCodes.OK, Obj3dType.o3d_baseExtrusion,
             Direction_Type.dtReverse, TestName = "KompasExtrusion by sketch, type =" +
-            " baseExtrusion, обратное направление")]
+            " baseExtrusion, reverse direction")]
         [TestCase(ErrorCodes.ExtrusionDirectionNotSupported, Obj3dType.o3d_baseExtrusion,
-            Direction_Type.dtMiddlePlane, TestName = "KompasExtrusion по эскизу, тип =" +
-            " baseExtrusion, направление средней плоскости (не поддерживается)")]
+            Direction_Type.dtMiddlePlane, TestName = "KompasExtrusion according to the sketch, " +
+            "type" + " =" + " baseExtrusion, median plane direction(not supported)")]
         [TestCase(ErrorCodes.ExtrusionDirectionNotSupported, Obj3dType.o3d_baseExtrusion,
-            Direction_Type.dtBoth, TestName = "KompasExtrusion по эскизу, тип = " +
-            "baseExtrusion, направление = оба (не поддерживается)")]
+            Direction_Type.dtBoth, TestName = "KompasExtrusion according to the sketch, type = " +
+            "baseExtrusion, direction = both (not supported)")]
         [TestCase(ErrorCodes.ExtrusionTypeCurrentlyNotSupported, Obj3dType.o3d_axisOZ,
-            Direction_Type.dtReverse, TestName = "KompasExtrusion по эскизу, тип = " +
-            "axisOZ (incorrect)")]
+            Direction_Type.dtReverse, TestName = "KompasExtrusion according to the sketch, type = "
+            + "axisOZ (incorrect)")]
         public void TestBaseBySketch(ErrorCodes errorCode, Obj3dType extrusionType, 
             Direction_Type directionType)
         {
@@ -54,15 +54,15 @@ namespace Screw.UnitTests.Model.Entity
         }
 
         /// <summary>
-        /// Тест создания разреза по эскизу
+        /// Sketch creation test
         /// </summary>
         /// <param name="errorCode">Error code</param>
-        /// <param name="extrusionType">Extrusion type, экземпляр Obj3dType</param>
-        /// <param name="directionType">Direction type, экземпляр Direction_Type</param>
+        /// <param name="extrusionType">Extrusion type, instance Obj3dType</param>
+        /// <param name="directionType">Direction type, instance Direction_Type</param>
         [TestCase(ErrorCodes.OK, Obj3dType.o3d_cutExtrusion, Direction_Type.dtNormal, 
-            TestName = "KompasExtrusion по эскизу, тип = cutExtrusion, нормальное направление")]
+            TestName = "KompasExtrusion according to the sketch, type = cutExtrusion, normal direction")]
         [TestCase(ErrorCodes.OK, Obj3dType.o3d_cutExtrusion, Direction_Type.dtReverse, 
-            TestName = "KompasExtrusion по эскизу, тип = cutExtrusion, обратное направление")]
+            TestName = "KompasExtrusion according to the sketch, type = cutExtrusion, normal direction")]
         public void TestCutBySketch(ErrorCodes errorCode, Obj3dType extrusionType, 
             Direction_Type directionType)
         {
@@ -94,17 +94,19 @@ namespace Screw.UnitTests.Model.Entity
         }
 
         /// <summary>
-        /// Тест создания разреза по эскизу с не поддерживаемым направлением
+        /// Test for creating a cut from a sketch with an unsupported direction
         /// </summary>
         /// <param name="errorCode">Error code</param>
-        /// <param name="extrusionType">Extrusion type, экземпляр Obj3dType</param>
-        /// <param name="directionType">Direction type, экземпляр Direction_Type</param>
+        /// <param name="extrusionType">Extrusion type, instance Obj3dType</param>
+        /// <param name="directionType">Direction type, instance Direction_Type</param>
         [TestCase(ErrorCodes.ExtrusionDirectionNotSupported, Obj3dType.o3d_cutExtrusion, 
             Direction_Type.dtMiddlePlane, TestName =
-            "KompasExtrusion по эскизу, тип = cutExtrusion, направление средней плоскости (не поддерживается)")]
+            "KompasExtrusion according to the sketch, type = cutExtrusion, " +
+            "median plane direction (not supported)")]
         [TestCase(ErrorCodes.ExtrusionDirectionNotSupported, Obj3dType.o3d_cutExtrusion,
-            Direction_Type.dtBoth, TestName = 
-            "KompasExtrusion по эскизу, тип = cutExtrusion, направление = оба (не поддерживается)")]
+            Direction_Type.dtBoth, TestName =
+            "KompasExtrusion according to the sketch, type = cutExtrusion," +
+            " direction = both (not supported)")]
         public void CutBySketchUnsupportedDirection(ErrorCodes errorCode, 
             Obj3dType extrusionType, Direction_Type directionType)
         {
@@ -120,10 +122,10 @@ namespace Screw.UnitTests.Model.Entity
         }
 
         /// <summary>
-        /// Создать эскиз компаса с кругом внутри
+        /// Sketch a compass with a circle inside
         /// </summary>
         /// <param name="app">Kompas application</param>
-        /// <returns>Компас эскиз с кругом</returns>
+        /// <returns>Compass sketch with circle</returns>
         public ksEntity CreateSketchWithCirle(KompasApplication app, int circleRadius = 10)
         {
             var sketch = new KompasSketch(app.ScrewPart, Obj3dType.o3d_planeXOY);

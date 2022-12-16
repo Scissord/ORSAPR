@@ -28,7 +28,7 @@ namespace Screw
         private List<double> _figureParameters;
 
         /// <summary>
-        /// screw view form constructor
+        /// Screw view form constructor
         /// </summary>
         public ScrewView()
         {
@@ -72,7 +72,7 @@ namespace Screw
         /// <summary>
         /// Set figure parameters
         /// </summary>
-        /// <returns>true если операция прошла успешно; false в случае ошибки</returns>
+        /// <returns>true if the operation was successful; false в error case</returns>
         private bool SetFigureParameters()
         {
             try
@@ -107,8 +107,8 @@ namespace Screw
             }
             catch
             {
-                MessageBox.Show("Есть несколько пустых или недействительных полей. " +
-                    "Пожалуйста, заполните их правильно и попробуйте снова. ", "Information",
+                MessageBox.Show("There are some empty or invalid fields. " +
+                    "Please fill them in correctly and try again. ", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 return false;
@@ -118,7 +118,7 @@ namespace Screw
         }
 
         /// <summary>
-        /// Посылает элемент управления в класс для проверки пользовательского ввода
+        /// Sends a control to a class to validate user input
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -188,7 +188,7 @@ namespace Screw
         }
 
         /// <summary>
-        ///Проверка пользовательских параметров ввода и построение фигуры после этого
+        /// Validating user input options and building the figure after that
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -198,7 +198,7 @@ namespace Screw
 
             if (_kompasApp == null)
             {
-                MessageBox.Show("Сначала загрузите KOMPAS 3D.", "Information",
+                MessageBox.Show("Download first KOMPAS 3D.", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return;
@@ -262,7 +262,7 @@ namespace Screw
         }
 
         /// <summary>
-        /// Установка стандартных параметров
+        /// Setting default parameters
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -302,21 +302,6 @@ namespace Screw
             {
                 NutThreadDiameter.Text = "";
             }
-        }
-
-        private void ScrewView_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ScrewHatWidth_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NutHeight_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

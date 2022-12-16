@@ -54,7 +54,7 @@ namespace Screw.Validator
         /// <summary>
         /// Validate all chain by set of rules
         /// </summary>
-        /// <returns>true if validation successfu</returns>
+        /// <returns>true if validation successful</returns>
         public bool Validate()
         {
             var screwHatHeight = _figureParameters[4];
@@ -196,30 +196,30 @@ namespace Screw.Validator
         }
 
         /// <summary>
-        /// Проверка двойных значений в параметрах фигуры.
+        /// Checking for double values ​​in shape parameters.
         /// </summary>
-        /// <returns> true, если проверка прошла успешно</returns>
+        /// <returns> true, if the check was successful</returns>
         private bool ValidateDoubles()
         {
             foreach (double parameter in _figureParameters)
             {
                 if (parameter <= 0)
                 {
-                    ErrorList.Add("Параметр не может принимать значение 0");
+                    ErrorList.Add("Parameter can't be 0");
                     return false;
                 }
                 if (parameter < 0.1)
                 {
-                    ErrorList.Add("Параметр должен быть больше 0.1");
+                    ErrorList.Add("The parameter must be greater than 0.1");
                     return false;
                 }
                 if (parameter >= 1000)
                 {
-                    ErrorList.Add("Параметр должен быть меньше 1000");
+                    ErrorList.Add("Parameter must be less than 1000");
                 }
                 if (!DoubleValidator.Validate(parameter))
                 {
-                    ErrorList.Add("Некорректное значение парамета");
+                    ErrorList.Add("Incorrect parameter value");
                     return false;
                 }
             }

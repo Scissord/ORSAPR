@@ -19,28 +19,28 @@ namespace Screw.UnitTests.Model.Entity
     public class KompasSketchTest
     {
         /// <summary>
-        /// Тест создания эскиза на оси базовой плоскости
+        /// Reference Plane Sketching Test
         /// </summary>
         /// <param name="errorCode">Error code</param>
-        /// <param name="basePlaneAxis">Ось базовой плоскости, экземпляр Obj3dType</param>
+        /// <param name="basePlaneAxis">Reference Plane Axis Instance Obj3dType</param>
         [TestCase(ErrorCodes.OK, Obj3dType.o3d_planeXOY, 
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_planeXOY")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_planeXOY")]
         [TestCase(ErrorCodes.OK, Obj3dType.o3d_planeXOZ, 
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_planeXOZ")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_planeXOZ")]
         [TestCase(ErrorCodes.OK, Obj3dType.o3d_planeYOZ, 
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_planeYOZ")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_planeYOZ")]
         [TestCase(ErrorCodes.ArgumentInvalid, Obj3dType.o3d_axisOX, 
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_axisOX")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_axisOX")]
         [TestCase(ErrorCodes.ArgumentInvalid, Obj3dType.o3d_axisOY, 
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_axisOY")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_axisOY")]
         [TestCase(ErrorCodes.ArgumentInvalid, Obj3dType.o3d_axisOZ,
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_axisOZ")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_axisOZ")]
         [TestCase(ErrorCodes.ArgumentInvalid, Obj3dType.o3d_unknown, 
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_unknown")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_unknown")]
         [TestCase(ErrorCodes.ArgumentInvalid, Obj3dType.o3d_face, 
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_face")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_face")]
         [TestCase(ErrorCodes.ArgumentInvalid, Obj3dType.o3d_edge, 
-            TestName = "KompasSketch на оси базовой плоскости = Obj3dType.o3d_edge")]
+            TestName = "KompasSketch on the axis of the reference plane = Obj3dType.o3d_edge")]
         public void CreateOnBasePlaneAxis(ErrorCodes errorCode, Obj3dType basePlaneAxis)
         {
             var appTest = new KompasApplicationTest();
@@ -51,11 +51,11 @@ namespace Screw.UnitTests.Model.Entity
         }
 
         /// <summary>
-        /// Тест создания эскиза на базовой плоскости = null
+        /// Reference Plane Sketching Test = null
         /// </summary>
         /// <param name="errorCode">Error code</param>
         [TestCase(ErrorCodes.ArgumentNull, null, 
-            TestName = "KompasSketch на базовой плоскости = null")]
+            TestName = "KompasSketch on the base plane = null")]
         public void CreateOnNull(ErrorCodes errorCode, ksEntity entity)
         {
             var appTest = new KompasApplicationTest();

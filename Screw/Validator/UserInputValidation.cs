@@ -4,15 +4,15 @@ using System.Windows.Forms;
 namespace Screw.Validator
 {
     /// <summary>
-    /// Класс для обработчика событий "CheckNumberKeyPressed".
+    /// Class for the "CheckNumberKeyPressed" event handler.
     /// </summary>
     public class UserInputValidation
     {
         /// <summary>
-        /// Проверяет на ввод только цифры.
+        /// Validates only numbers for input.
         /// </summary>
-        /// If отсутствует в [0-9] или введен разделитель -- установить событие обработано.
-        ///Разделитель - точка или запятая -> вводимый номер должен содержать только 1 точку или только 1 запятую.
+        /// If is missing in [0-9] or a delimiter is entered -- set event handled.
+        /// Separator - dot or comma -> entered number must contain only 1 dot or only 1 comma.
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public static void CheckNumberKeyPressed(object sender, KeyPressEventArgs e)

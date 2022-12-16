@@ -236,7 +236,6 @@
             this.NutHeight.Name = "NutHeight";
             this.NutHeight.Size = new System.Drawing.Size(100, 25);
             this.NutHeight.TabIndex = 7;
-            this.NutHeight.SelectedIndexChanged += new System.EventHandler(this.NutHeight_SelectedIndexChanged);
             // 
             // ScrewBaseThreadWidth
             // 
@@ -287,7 +286,6 @@
             this.ScrewHatWidth.Name = "ScrewHatWidth";
             this.ScrewHatWidth.Size = new System.Drawing.Size(100, 25);
             this.ScrewHatWidth.TabIndex = 3;
-            this.ScrewHatWidth.SelectedIndexChanged += new System.EventHandler(this.ScrewHatWidth_SelectedIndexChanged);
             this.ScrewHatWidth.TextChanged += new System.EventHandler(this.ScrewHatWidth_ChangeText);
             // 
             // ScrewHatWidthLabel
@@ -421,7 +419,6 @@
             this.MinimumSize = new System.Drawing.Size(700, 425);
             this.Name = "ScrewView";
             this.Text = "Build screw";
-            this.Load += new System.EventHandler(this.ScrewView_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
