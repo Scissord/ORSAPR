@@ -31,19 +31,15 @@ namespace Screw.Model.Entity
         /// <returns>Screwdriver entity</returns>
         public override ksEntity BuildScrewdriver()
         {
-            var Diameter = _kompasApp.Parameters[0];
-            var Hate = _kompasApp.Parameters[5];
+            var offsetX = 0;
+            var offsetY = 0;
 
-            var offsetX = -0.6 * Diameter;
-            var offsetY = -0.4 * Hate;
+            var inscribedCircleRadius = _kompasApp.Parameters[0] / 1.800001;
 
-            var width = 1.2 * Diameter;
-            var height = 0.8 * Hate;
-           
-            var parameters = new double[4]{
-                offsetX, offsetY, width, height};
+            var parameters = new double[3]{
+                offsetX, offsetY, inscribedCircleRadius};
 
-            var entity = CreateCutout(parameters);
+            var entity = CreateCuto(parameters);
             if (entity == null)
             {
                 return null;
@@ -51,7 +47,5 @@ namespace Screw.Model.Entity
             }
             return entity;
         }
-        
-        
     }
 }

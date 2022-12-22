@@ -35,15 +35,6 @@ namespace Screw.Model.Entity
         }
 
         /// <summary>
-        /// Entity base plane setter
-        /// </summary>
-        public ksEntity BasePlane
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
         /// Create sketch from reference plane
         /// </summary>
         /// <param name="doc3DPart">Document 3D part</param>

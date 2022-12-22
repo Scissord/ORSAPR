@@ -90,7 +90,7 @@ namespace Screw.Manager
 
             return true;
         }
-
+        
         /// <summary>
         /// Create muffler and hat
         /// </summary>
@@ -110,6 +110,7 @@ namespace Screw.Manager
 
             return extruded;
         }
+
         /// <summary>
         /// Method for sketching a screw head
         /// </summary>
@@ -118,7 +119,7 @@ namespace Screw.Manager
         {
             var screwHat = new KompasSketch(_kompasApp.ScrewPart, Obj3dType.o3d_planeYOZ);
         
-            DrawScrew(screwHat, new KompasPoint2D(0, 0), _kompasApp.Parameters[0] / 2);
+            DrawScrew(screwHat, new KompasPoint2D(0, 0), _kompasApp.Parameters[0] / 1.8);
 
             return ExtrusionScrew(screwHat, Direction_Type.dtReverse, _kompasApp.Parameters[4] * 0.84);      
         }
@@ -133,11 +134,11 @@ namespace Screw.Manager
         /// </returns>
         private ksEntity[] CreateBase(ksEntity basePlaneOfHat)
         {
-            double coef     = (_kompasApp.Parameters[0] * 0.700) / 2.0;
+            double smooth     = (_kompasApp.Parameters[0] * 0.700) / 2.0;
             double gostbase = (_kompasApp.Parameters[0] * 0.525) / 2.0;
 
             var screwBase = new KompasSketch(_kompasApp.ScrewPart, basePlaneOfHat);
-            DrawScrew(screwBase, new KompasPoint2D(0, 0), coef);
+            DrawScrew(screwBase, new KompasPoint2D(0, 0), smooth);
             var extruded1 = ExtrusionScrew(screwBase, 
                 Direction_Type.dtNormal, _kompasApp.Parameters[2]);                     
             

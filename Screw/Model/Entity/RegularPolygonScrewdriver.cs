@@ -48,9 +48,6 @@ namespace Screw.Model.Entity
                 return null;
             }
             return entity;
-
-
-
         }   
     }
 

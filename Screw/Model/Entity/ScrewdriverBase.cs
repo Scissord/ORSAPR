@@ -32,6 +32,49 @@ namespace Screw.Model.Entity
         /// <returns>Screwdriver entity.</returns>
         abstract public ksEntity BuildScrewdriver();
 
+        protected ksEntity CreateCuto(double[] parameters)
+        {
+            var offsetX = parameters[0];
+            var offsetY = parameters[1];
+            var inscribedCircleRadius = parameters[2];
+
+            var gost = 0.84;
+
+            var regPolySketch = new KompasSketch(_kompasApp.ScrewPart,
+                Obj3dType.o3d_planeYOZ);
+            var regPolySketchEdit = regPolySketch.BeginEntityEdit();
+            var regPolyPoint = new KompasPoint2D(offsetX, offsetY);
+            var regPolyParam = new RegularPolygonParameter(
+                _kompasApp,
+                6, 
+                inscribedCircleRadius, 
+                regPolyPoint
+                );//W3
+            if (regPolySketchEdit.ksRegularPolygon(regPolyParam.FigureParam, 0) == 0)
+            {
+                LastErrorCode = ErrorCodes.Document2DRegPolyCreatingError;
+                return null;
+            }
+
+            regPolySketch.EndEntityEdit();
+
+            var extrusionParameters = new KompasExtrusionParameters
+                (
+                    _kompasApp.ScrewPart, 
+                    Obj3dType.o3d_baseExtrusion, 
+                    regPolySketch.Entity,
+                    Direction_Type.dtReverse,
+                    _kompasApp.Parameters[4] * gost
+                );
+            var regPolyExtrusion = new KompasExtrusion
+                (
+                    extrusionParameters,
+                    ExtrusionType.ByEntity
+                ); 
+
+            return regPolyExtrusion.ExtrudedEntity;
+        }
+
         /// <summary>
         /// Create cutoff for flathead screwdriver
         /// </summary>
@@ -181,6 +224,6 @@ namespace Screw.Model.Entity
                 extrusionParameters, ExtrusionType.ByEntity); 
 
             return regPolyExtrusion.ExtrudedEntity;  
-        }   
+        }
     }
 }

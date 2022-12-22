@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScrewView));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CloseKompas3D = new System.Windows.Forms.Button();
@@ -55,10 +56,12 @@
             this.CrossheadScrewdriverRadioButton = new System.Windows.Forms.RadioButton();
             this.FlatheadScrewdriverRadioButton = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.TypeOfScrewdriverHoleGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -151,7 +154,7 @@
             // 
             this.NutHeightLabel.AutoSize = true;
             this.NutHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NutHeightLabel.Location = new System.Drawing.Point(9, 173);
+            this.NutHeightLabel.Location = new System.Drawing.Point(10, 128);
             this.NutHeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NutHeightLabel.Name = "NutHeightLabel";
             this.NutHeightLabel.Size = new System.Drawing.Size(162, 17);
@@ -161,12 +164,12 @@
             // NutThreadDiameterLabel
             // 
             this.NutThreadDiameterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NutThreadDiameterLabel.Location = new System.Drawing.Point(9, 207);
+            this.NutThreadDiameterLabel.Location = new System.Drawing.Point(10, 190);
             this.NutThreadDiameterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NutThreadDiameterLabel.Name = "NutThreadDiameterLabel";
             this.NutThreadDiameterLabel.Size = new System.Drawing.Size(187, 27);
             this.NutThreadDiameterLabel.TabIndex = 0;
-            this.NutThreadDiameterLabel.Text = "Slot width (n) (2.5-11.25)mm";
+            this.NutThreadDiameterLabel.Text = "Slot width (n) (2.5-9)mm";
             // 
             // groupBox2
             // 
@@ -190,7 +193,7 @@
             this.groupBox2.Size = new System.Drawing.Size(362, 243);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Parameters of screw";
+            this.groupBox2.Text = ".";
             // 
             // screwHatInnerDiameter
             // 
@@ -202,10 +205,10 @@
             "6",
             "7",
             "8"});
-            this.screwHatInnerDiameter.Location = new System.Drawing.Point(255, 68);
+            this.screwHatInnerDiameter.Location = new System.Drawing.Point(254, 159);
             this.screwHatInnerDiameter.Name = "screwHatInnerDiameter";
             this.screwHatInnerDiameter.Size = new System.Drawing.Size(100, 25);
-            this.screwHatInnerDiameter.TabIndex = 4;
+            this.screwHatInnerDiameter.TabIndex = 7;
             // 
             // NutThreadDiameter
             // 
@@ -217,7 +220,7 @@
             "8",
             "11",
             "14"});
-            this.NutThreadDiameter.Location = new System.Drawing.Point(255, 204);
+            this.NutThreadDiameter.Location = new System.Drawing.Point(254, 190);
             this.NutThreadDiameter.Name = "NutThreadDiameter";
             this.NutThreadDiameter.Size = new System.Drawing.Size(100, 25);
             this.NutThreadDiameter.TabIndex = 8;
@@ -232,10 +235,10 @@
             "10",
             "11",
             "12"});
-            this.NutHeight.Location = new System.Drawing.Point(255, 170);
+            this.NutHeight.Location = new System.Drawing.Point(254, 128);
             this.NutHeight.Name = "NutHeight";
             this.NutHeight.Size = new System.Drawing.Size(100, 25);
-            this.NutHeight.TabIndex = 7;
+            this.NutHeight.TabIndex = 6;
             // 
             // ScrewBaseThreadWidth
             // 
@@ -247,10 +250,10 @@
             "64",
             "70",
             "76"});
-            this.ScrewBaseThreadWidth.Location = new System.Drawing.Point(255, 136);
+            this.ScrewBaseThreadWidth.Location = new System.Drawing.Point(254, 97);
             this.ScrewBaseThreadWidth.Name = "ScrewBaseThreadWidth";
             this.ScrewBaseThreadWidth.Size = new System.Drawing.Size(100, 25);
-            this.ScrewBaseThreadWidth.TabIndex = 6;
+            this.ScrewBaseThreadWidth.TabIndex = 5;
             // 
             // ScrewBaseSmoothWidth
             // 
@@ -262,10 +265,10 @@
             "25",
             "28",
             "30"});
-            this.ScrewBaseSmoothWidth.Location = new System.Drawing.Point(255, 102);
+            this.ScrewBaseSmoothWidth.Location = new System.Drawing.Point(254, 66);
             this.ScrewBaseSmoothWidth.Name = "ScrewBaseSmoothWidth";
             this.ScrewBaseSmoothWidth.Size = new System.Drawing.Size(100, 25);
-            this.ScrewBaseSmoothWidth.TabIndex = 5;
+            this.ScrewBaseSmoothWidth.TabIndex = 4;
             // 
             // ScrewHatWidth
             // 
@@ -282,7 +285,7 @@
             "21 ",
             "27 ",
             "30"});
-            this.ScrewHatWidth.Location = new System.Drawing.Point(255, 35);
+            this.ScrewHatWidth.Location = new System.Drawing.Point(254, 35);
             this.ScrewHatWidth.Name = "ScrewHatWidth";
             this.ScrewHatWidth.Size = new System.Drawing.Size(100, 25);
             this.ScrewHatWidth.TabIndex = 3;
@@ -292,17 +295,17 @@
             // 
             this.ScrewHatWidthLabel.AutoSize = true;
             this.ScrewHatWidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ScrewHatWidthLabel.Location = new System.Drawing.Point(10, 38);
+            this.ScrewHatWidthLabel.Location = new System.Drawing.Point(9, 35);
             this.ScrewHatWidthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScrewHatWidthLabel.Name = "ScrewHatWidthLabel";
             this.ScrewHatWidthLabel.Size = new System.Drawing.Size(186, 17);
             this.ScrewHatWidthLabel.TabIndex = 0;
-            this.ScrewHatWidthLabel.Text = "Hat diameter (D) (15-45)mm";
+            this.ScrewHatWidthLabel.Text = "Hat diameter (D) (27-45)mm";
             // 
             // ScrewBaseSmoothPartLabel
             // 
             this.ScrewBaseSmoothPartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ScrewBaseSmoothPartLabel.Location = new System.Drawing.Point(9, 105);
+            this.ScrewBaseSmoothPartLabel.Location = new System.Drawing.Point(10, 66);
             this.ScrewBaseSmoothPartLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScrewBaseSmoothPartLabel.Name = "ScrewBaseSmoothPartLabel";
             this.ScrewBaseSmoothPartLabel.Size = new System.Drawing.Size(177, 27);
@@ -312,17 +315,17 @@
             // ScrewBaseThreadPartLabel
             // 
             this.ScrewBaseThreadPartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ScrewBaseThreadPartLabel.Location = new System.Drawing.Point(10, 139);
+            this.ScrewBaseThreadPartLabel.Location = new System.Drawing.Point(9, 97);
             this.ScrewBaseThreadPartLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScrewBaseThreadPartLabel.Name = "ScrewBaseThreadPartLabel";
-            this.ScrewBaseThreadPartLabel.Size = new System.Drawing.Size(176, 27);
+            this.ScrewBaseThreadPartLabel.Size = new System.Drawing.Size(238, 27);
             this.ScrewBaseThreadPartLabel.TabIndex = 0;
             this.ScrewBaseThreadPartLabel.Text = "Thread part (b) (5-80)mm";
             // 
             // ScrewHatInnerCircleLabel
             // 
             this.ScrewHatInnerCircleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ScrewHatInnerCircleLabel.Location = new System.Drawing.Point(10, 71);
+            this.ScrewHatInnerCircleLabel.Location = new System.Drawing.Point(10, 159);
             this.ScrewHatInnerCircleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScrewHatInnerCircleLabel.Name = "ScrewHatInnerCircleLabel";
             this.ScrewHatInnerCircleLabel.Size = new System.Drawing.Size(163, 27);
@@ -336,11 +339,11 @@
             this.TypeOfScrewdriverHoleGroupBox.Controls.Add(this.CrossheadScrewdriverRadioButton);
             this.TypeOfScrewdriverHoleGroupBox.Controls.Add(this.FlatheadScrewdriverRadioButton);
             this.TypeOfScrewdriverHoleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TypeOfScrewdriverHoleGroupBox.Location = new System.Drawing.Point(383, 271);
+            this.TypeOfScrewdriverHoleGroupBox.Location = new System.Drawing.Point(383, 249);
             this.TypeOfScrewdriverHoleGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.TypeOfScrewdriverHoleGroupBox.Name = "TypeOfScrewdriverHoleGroupBox";
             this.TypeOfScrewdriverHoleGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.TypeOfScrewdriverHoleGroupBox.Size = new System.Drawing.Size(288, 62);
+            this.TypeOfScrewdriverHoleGroupBox.Size = new System.Drawing.Size(288, 86);
             this.TypeOfScrewdriverHoleGroupBox.TabIndex = 21;
             this.TypeOfScrewdriverHoleGroupBox.TabStop = false;
             this.TypeOfScrewdriverHoleGroupBox.Text = "Type of screwdriver hole";
@@ -358,12 +361,13 @@
             this.RegularPolygonScrewdriverRadioButton.TabStop = true;
             this.RegularPolygonScrewdriverRadioButton.Text = "Regular Polygon Screwdriver\r\n";
             this.RegularPolygonScrewdriverRadioButton.UseVisualStyleBackColor = true;
+            this.RegularPolygonScrewdriverRadioButton.CheckedChanged += new System.EventHandler(this.RegularPolygonScrewdriverRadioButton_CheckedChanged);
             // 
             // WithoutHoleRadioButton
             // 
             this.WithoutHoleRadioButton.AutoSize = true;
             this.WithoutHoleRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.WithoutHoleRadioButton.Location = new System.Drawing.Point(12, 79);
+            this.WithoutHoleRadioButton.Location = new System.Drawing.Point(8, 121);
             this.WithoutHoleRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.WithoutHoleRadioButton.Name = "WithoutHoleRadioButton";
             this.WithoutHoleRadioButton.Size = new System.Drawing.Size(117, 21);
@@ -375,7 +379,7 @@
             // 
             this.CrossheadScrewdriverRadioButton.AutoSize = true;
             this.CrossheadScrewdriverRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CrossheadScrewdriverRadioButton.Location = new System.Drawing.Point(12, 98);
+            this.CrossheadScrewdriverRadioButton.Location = new System.Drawing.Point(8, 91);
             this.CrossheadScrewdriverRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.CrossheadScrewdriverRadioButton.Name = "CrossheadScrewdriverRadioButton";
             this.CrossheadScrewdriverRadioButton.Size = new System.Drawing.Size(170, 21);
@@ -387,13 +391,14 @@
             // 
             this.FlatheadScrewdriverRadioButton.AutoSize = true;
             this.FlatheadScrewdriverRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FlatheadScrewdriverRadioButton.Location = new System.Drawing.Point(12, 117);
+            this.FlatheadScrewdriverRadioButton.Location = new System.Drawing.Point(8, 62);
             this.FlatheadScrewdriverRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.FlatheadScrewdriverRadioButton.Name = "FlatheadScrewdriverRadioButton";
-            this.FlatheadScrewdriverRadioButton.Size = new System.Drawing.Size(157, 21);
+            this.FlatheadScrewdriverRadioButton.Size = new System.Drawing.Size(88, 21);
             this.FlatheadScrewdriverRadioButton.TabIndex = 18;
-            this.FlatheadScrewdriverRadioButton.Text = "Flathead screwdriver";
+            this.FlatheadScrewdriverRadioButton.Text = "Hex Head";
             this.FlatheadScrewdriverRadioButton.UseVisualStyleBackColor = true;
+            this.FlatheadScrewdriverRadioButton.CheckedChanged += new System.EventHandler(this.FlatheadScrewdriverRadioButton_CheckedChanged);
             // 
             // pictureBox1
             // 
@@ -402,7 +407,7 @@
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(407, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 242);
+            this.pictureBox1.Size = new System.Drawing.Size(245, 238);
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
@@ -419,6 +424,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 425);
             this.Name = "ScrewView";
             this.Text = "Build screw";
+            this.Load += new System.EventHandler(this.ScrewView_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -426,6 +432,7 @@
             this.TypeOfScrewdriverHoleGroupBox.ResumeLayout(false);
             this.TypeOfScrewdriverHoleGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,6 +465,7 @@
         private System.Windows.Forms.RadioButton FlatheadScrewdriverRadioButton;
         private System.Windows.Forms.RadioButton RegularPolygonScrewdriverRadioButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
 

@@ -14,6 +14,7 @@ namespace Screw.Model
         WithoutHole = 1,
         CrossheadScrewdriver,
         FlatheadScrewdriver,
-        RegularPolygonScrewdriver
+        RegularPolygonScrewdriver,
+        RoundedChmfr
     }
 }

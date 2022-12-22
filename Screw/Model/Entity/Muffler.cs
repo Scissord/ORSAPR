@@ -24,7 +24,7 @@ namespace Screw.Model.Entity
         /// <summary>
         /// Muffler extrusion getter
         /// </summary>
-        private KompasExtrusion Extrusion
+        public KompasExtrusion Extrusion
         {
             get;
             set;

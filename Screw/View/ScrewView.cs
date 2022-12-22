@@ -298,10 +298,47 @@ namespace Screw
             {
                 NutThreadDiameterLabel.Text = $"Slot width (n) (2.5-{maxLength})mm";
             }
-            if (getValue >= 0 && getValue < 10)
+        }
+
+        private void FlatheadScrewdriverRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (FlatheadScrewdriverRadioButton.Checked)
             {
-                NutThreadDiameter.Text = "";
+                ScrewHatWidthLabel.Text = "Hat diameter (D) (27-45)mm";
+                ScrewBaseSmoothPartLabel.Text = "Smooth part (l) (5-35)mm";
+                ScrewBaseThreadPartLabel.Text = "Thread part (b) (5-80)mm";
+                NutHeightLabel.Text = "Hat height (H) (6-20)mm";
+                screwHatInnerDiameter.Text = 4.ToString();
+                NutThreadDiameter.Text = 2.5.ToString();
+                screwHatInnerDiameter.Visible = false;
+                NutThreadDiameter.Visible = false;
+                ScrewHatInnerCircleLabel.Visible = false;
+                NutThreadDiameterLabel.Visible = false;
             }
+        }
+
+        private void RegularPolygonScrewdriverRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RegularPolygonScrewdriverRadioButton.Checked)
+            {
+                ScrewHatInnerCircleLabel.Visible = true;
+                NutThreadDiameterLabel.Visible = true;
+                screwHatInnerDiameter.Visible = true;
+                NutThreadDiameter.Visible = true;
+                screwHatInnerDiameter.Text = "";
+                NutThreadDiameter.Text = "";
+                ScrewHatWidthLabel.Text = "Hat diameter (D) (27-45)mm";
+                ScrewBaseSmoothPartLabel.Text = "Smooth part (l) (5-35)mm";
+                ScrewBaseThreadPartLabel.Text = "Thread part (b) (5-80)mm";
+                NutHeightLabel.Text = "Hat height (H) (6-20)mm";
+                ScrewHatInnerCircleLabel.Text = "Slot depth (m) (4-8)mm";
+                NutThreadDiameterLabel.Text = "Slot width (n) (2.5-9)mm";
+            }
+        }
+
+        private void ScrewView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

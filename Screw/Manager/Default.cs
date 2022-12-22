@@ -63,7 +63,7 @@ namespace Screw.Manager
         /// <summary>
         /// Default parameters
         /// </summary>
-        public Default() :this ( 27, 5, 15, 64, 10, 5.4 ) { }
+        public Default() :this ( 27, 5, 15, 64, 10, 2.5 ) { }
         
     }   
 

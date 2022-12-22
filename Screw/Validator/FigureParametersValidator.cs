@@ -96,11 +96,11 @@ namespace Screw.Validator
                 ErrorList.Add(errorMessage);
             }
 
-            if (_figureParameters[0] < 15)
+            if (_figureParameters[0] < 27)
             {
-                diapasonStart = 15;
+                diapasonStart = 27;
                 errorMessage = string.Format(CultureInfo.InvariantCulture,
-                    "Hat diameter (D) must be more or equals 15", diapasonStart);
+                    "Hat diameter (D) must be more or equals 27", diapasonStart);
                 ErrorList.Add(errorMessage);
             }
 
